@@ -13,20 +13,20 @@ $('#element').tabs();
 
 ## Exemple
 ```html
-&lt;div class="tabs"&gt;
-	&lt;ul&gt;
-		&lt;li&gt;&lt;a href="#ancre1" data-toggle="tab"&gt;Onglet 1&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#ancre2" data-toggle="tab"&gt;Onglet 2&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#ancre3" data-toggle="tab"&gt;Onglet 3&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href="#ancre4" data-toggle="tab"&gt;Onglet 4&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="contenus"&gt;
-	&lt;div id="ancre1"&gt;Contenu&lt;/div&gt;
-	&lt;div id="ancre2"&gt;Contenu&lt;/div&gt;
-	&lt;div id="ancre3"&gt;Contenu&lt;/div&gt;
-	&lt;div id="ancre4"&gt;Contenu&lt;/div&gt;
-&lt;/div&gt;
+<div class="tabs">
+	<ul>
+		<li><a href="#ancre1" data-toggle="tab">Onglet 1</a></li>
+		<li><a href="#ancre2" data-toggle="tab">Onglet 2</a></li>
+		<li><a href="#ancre3" data-toggle="tab">Onglet 3</a></li>
+		<li><a href="#ancre4" data-toggle="tab">Onglet 4</a></li>
+	</ul>
+</div>
+<div class="contenus">
+	<div id="ancre1">Contenu</div>
+	<div id="ancre2">Contenu</div>
+	<div id="ancre3">Contenu</div>
+	<div id="ancre4">Contenu</div>
+</div>
 ```
 
 #Options
