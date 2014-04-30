@@ -53,7 +53,7 @@ $('#element').tabs();
 			<td>Gère ou non l'utilisation des ancres dans l'url pour définir l'onglet activé par défaut ; si la valeur est <code>true</code>, entrer l'url d'une page avec l'ancre activera automatiquement l'onglet correspondant.</td>
 		</tr>
 		<tr>
-			<th>time</th>
+			<th>duration</th>
 			<td>400</td>
 			<td>nombre ou valeurs clé de temps jquery (<code>slow</code>, <code>fast</code>)</td>
 			<td>Gère le temps de l'animation de changement de contenu.</td>
