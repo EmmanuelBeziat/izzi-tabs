@@ -9,10 +9,10 @@
 
 		// valeurs par défauts des options
 		params = $.extend({
-			'mode':	'fade',
-			'anchors': false,
-			'duration': 400,
-			'class': 'selected'
+			mode: 'fade',
+			anchors: false,
+			duration: 400,
+			class: 'selected'
 		}, params);
 
 		this.each(function() {
