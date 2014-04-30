@@ -68,5 +68,5 @@ $('#element').tabs();
 </table>
 
 #Évolutions envisagées
-*Rendre l'attribut data-toggle facultatif
-*Proposer d'autres modes d'affichage
+* Rendre l'attribut data-toggle facultatif
+* Proposer d'autres modes d'affichage
