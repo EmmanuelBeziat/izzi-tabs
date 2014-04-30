@@ -6,7 +6,7 @@ Un simple plugin d'onglets en jQuery, utilisable aussi bien pour la navigation d
 #Utilisation
 
 Le principe est basé sur les ancres html.
-Appelez simplement la méthode tabs() sur un objet jQuery, qui soit (ou contienne) une liste html contenant des liens avec l'attribut <code>data-toggle</code> ayant la valeur <code>tab</code>.
+Appelez simplement la méthode <code>tabs()</code> sur un objet jQuery, qui soit (ou contienne) une liste html contenant des liens avec l'attribut <code>data-toggle</code> ayant la valeur <code>tab</code>.
 ```javascript
 $('#element').tabs();
 ```
