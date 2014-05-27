@@ -27,7 +27,7 @@
 				tabAnchor = window.location.hash;
 
 			// Attribuer l'onglet par défaut comme étant le premier, ou utiliser l'ancre
-			if (true == params.anchors && '' != tabAnchor && tabContainer.find('a[data-toggle="tab"]'))
+			if (true === params.anchors && '' !== tabAnchor && tabContainer.find('a[data-toggle="tab"]'))
 				tabFirst = tabContainer.find('a[href="' + tabAnchor + '"]');
 
 			// Appliquer la class select sur l'onglet actuel
