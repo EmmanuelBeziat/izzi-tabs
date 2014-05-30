@@ -8,7 +8,7 @@
 (function($) {
 	$.fn.tabs = function(params) {
 
-		// valeurs par défauts des options
+		// Valeurs par défauts des options
 		params = $.extend({
 			mode: 'fade',
 			anchors: false,
@@ -16,15 +16,17 @@
 			class: 'selected'
 		}, params);
 
+		// Variables globales
+		var page = $('html, body'),
+			tabAnchor = window.location.hash;
+
 		this.each(function() {
 
 			// Variables
-			var page = $('html, body'),
-				tabContainer = $(this),
+			var tabContainer = $(this),
 				tabFirst = tabContainer.find('li:first a'),
 				tabCurrent = null,
-				tabID = null,
-				tabAnchor = window.location.hash;
+				tabID = null;
 
 			// Attribuer l'onglet par défaut comme étant le premier, ou utiliser l'ancre
 			if (true === params.anchors && '' !== tabAnchor && tabContainer.find('a[data-toggle="tab"]'))
