@@ -13,8 +13,7 @@
 			mode: 'fade',
 			anchors: false,
 			duration: 400,
-			class: 'selected',
-			classElement: 'link'
+			class: 'selected'
 		}, params);
 
 		// Variables globales
@@ -34,14 +33,7 @@
 				tabFirst = tabContainer.find('a[href="' + tabAnchor + '"]');
 
 			// Appliquer la class select sur l'onglet actuel
-			switch (params.classElement) {
-				case 'item':
-					tabFirst.parent().addClass(params.class);
-					break;
-				default:
-					tabFirst.addClass(params.class);
-					break;
-			}
+			tabFirst.parent().addClass(params.class);
 
 			// Afficher l'élément par défaut correspondant à celui de l'onglet par défaut ou l'onglet ancré
 			tabCurrent = tabFirst.attr('href');
@@ -67,14 +59,7 @@
 					}
 
 					// Retirer la classe des autres onglets et l'ajouter sur l'élément sélectionné
-					switch (params.classElement) {
-						case 'item':
-							$(this).addClass(params.class).parent('li').siblings().removeClass(params.class);
-							break;
-						default:
-							$(this).addClass(params.class).parent('li').siblings().find('a').removeClass(params.class);
-							break;
-					}
+					$(this).parent().addClass(params.class).siblings().removeClass(params.class);
 					tabCurrent = tabID;
 				}
 
