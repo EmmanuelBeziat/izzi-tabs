@@ -5,7 +5,7 @@
  * https://github.com/RhooManu/jQuery-Tabs
  **/
 
-(function($, undefined) {
+;(function($, undefined) {
 	"use strict";
 
 	$.fn.tabs = function(params) {
