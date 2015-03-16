@@ -1,4 +1,4 @@
-/**
+/*!
  * Système d'onglets automatisé
  * Version : 2.1
  * Par Emmanuel "Manumanu" B. (www.emmanuelbeziat.com)
