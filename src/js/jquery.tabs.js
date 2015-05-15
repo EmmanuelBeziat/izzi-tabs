@@ -2,7 +2,7 @@
  * Système d'onglets automatisé
  * Version : 2.1
  * Par Emmanuel "Manumanu" B. (www.emmanuelbeziat.com)
- * https://github.com/RhooManu/jQuery-Tabs
+ * https://github.com/EmmanuelBEziat/jQuery-Tabs
  **/
 
 ;(function($, undefined) {
