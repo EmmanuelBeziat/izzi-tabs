@@ -91,21 +91,19 @@
 					 */
 					$(this).parent().addClass(settings.class).siblings().removeClass(settings.class);
 					tabCurrent = tabID;
-
-					/**
-					 * Stop the page to scroll to anchor if needed
-					 */
-					if (settings.anchors) {
-						setTimeout(function() {
-							$('html, body').scrollTop(0, 0);
-						}, 1);
-					}
-					else {
-						event.preventDefault();
-					}
 				}
 
-				event.preventDefault();
+				/**
+				 * Stop the page to scroll to anchor if needed
+				 */
+				if (true === settings.anchors) {
+					setTimeout(function() {
+						$('html, body').scrollTop(0, 0);
+					}, 1);
+				}
+				else {
+					event.preventDefault();
+				}
 			});
 		}
 
