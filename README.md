@@ -29,6 +29,10 @@ $('#element').tabs();
 </div>
 ```
 
+```javascript
+$('.tabs').tabs();
+```
+
 #Options
 <table>
 	<thead>
