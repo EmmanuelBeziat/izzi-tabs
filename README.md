@@ -3,6 +3,16 @@ Tabs
 
 Un simple plugin d'onglets en jQuery, utilisable aussi bien pour la navigation d'un site qu'un simple bloc de présentation.
 
+#Installation
+
+Si vous utilisez Bower, vous pouvez l'installer directement
+
+```bash
+$ bower install jquery-simple-tabs
+```
+
+Sinon, il vous suffit de récupérer manuellement les fichiers sur github.
+
 #Utilisation
 
 Le principe est basé sur les ancres html.
