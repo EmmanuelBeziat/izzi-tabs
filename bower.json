@@ -1,0 +1,35 @@
+{
+  "name": "jQuery-Tabs",
+  "version": "2.1.0",
+  "homepage": "https://github.com/EmmanuelBeziat/jQuery-Tabs.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:EmmanuelBeziat/jQuery-Tabs.git"
+  },
+  "authors": [
+    "Emmanuel B. <contact@emmanuelbeziat.com>"
+  ],
+  "description": "Système d'onglets automatisé",
+  "main": "dist/jquery.tabs.min.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "jquery",
+    "scroll"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "src",
+    "gulpfile.js"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.2"
+  }
+}
