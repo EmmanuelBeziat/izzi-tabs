@@ -2,40 +2,42 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>jQuery Tabs</title>
+		<title>jQuery Tabs :: Exemple</title>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
-		<nav class="tabs">
-			<ul>
-				<li><a href="#ancre1" data-toggle="tab">Onglet 1</a></li>
-				<li><a href="#ancre2" data-toggle="tab">Onglet 2</a></li>
-				<li><a href="#ancre3" data-toggle="tab">Onglet 3</a></li>
-				<li><a href="#ancre4" data-toggle="tab">Onglet 4</a></li>
-			</ul>
-		</nav>
+		<div class="tabs">
+			<nav class="tabs-nav">
+				<ul class="tabs-nav-list">
+					<li class="tabs-nav-item"><a href="#ancre1" class="tabs-nav-link" data-toggle="tab">Onglet 1</a></li>
+					<li class="tabs-nav-item"><a href="#ancre2" class="tabs-nav-link" data-toggle="tab">Onglet 2</a></li>
+					<li class="tabs-nav-item"><a href="#ancre3" class="tabs-nav-link" data-toggle="tab">Onglet 3</a></li>
+					<li class="tabs-nav-item"><a href="#ancre4" class="tabs-nav-link" data-toggle="tab">Onglet 4</a></li>
+				</ul>
+			</nav>
 
-		<div class="contenus">
-			<div id="ancre1">
-				<h1>Ancre 1</h1>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est libero, sapiente voluptatibus rerum quia, mollitia voluptates nesciunt sint dicta accusantium. Architecto, delectus tempore magnam consequatur nisi ut incidunt fuga dicta.</div>
-			<div id="ancre2">
-				<h1>Ancre 2</h1>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, doloremque officia molestiae numquam ab enim eveniet porro error aliquam sapiente tempora a hic, ipsa laborum molestias corporis, sequi similique totam?</div>
-			<div id="ancre3">
-				<h1>Ancre 3</h1>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, doloribus numquam ad et enim laudantium minima atque omnis. Ut corporis provident delectus eaque minima quo doloribus, perspiciatis maxime architecto excepturi.</div>
-			<div id="ancre4">
-				<h1>Ancre 4</h1>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, explicabo! Rerum quidem odio tenetur libero explicabo temporibus provident ipsum esse cupiditate suscipit, ullam consequatur maxime sint rem, veniam sit. Omnis!</div>
+			<div class="tabs-content">
+				<div class="tabs-content-item" id="ancre1">
+					<h1 class="tabs-content-title">Ancre 1</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est libero, sapiente voluptatibus rerum quia, mollitia voluptates nesciunt sint dicta accusantium. Architecto, delectus tempore magnam consequatur nisi ut incidunt fuga dicta.</div>
+				<div class="tabs-content-item" id="ancre2">
+					<h1 class="tabs-content-title">Ancre 2</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, doloremque officia molestiae numquam ab enim eveniet porro error aliquam sapiente tempora a hic, ipsa laborum molestias corporis, sequi similique totam?</div>
+				<div class="tabs-content-item" id="ancre3">
+					<h1 class="tabs-content-title">Ancre 3</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, doloribus numquam ad et enim laudantium minima atque omnis. Ut corporis provident delectus eaque minima quo doloribus, perspiciatis maxime architecto excepturi.</div>
+				<div class="tabs-content-item" id="ancre4">
+					<h1 class="tabs-content-title">Ancre 4</h1>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, explicabo! Rerum quidem odio tenetur libero explicabo temporibus provident ipsum esse cupiditate suscipit, ullam consequatur maxime sint rem, veniam sit. Omnis!</div>
+			</div>
 		</div>
 
 		<script src="js/jquery-1.11.3.min.js"></script>
 		<script src="../dist/jquery-tabs.min.js"></script>
 		<script>
 			$(function() {
-				$('.tabs').tabs();
+				$('.tabs-nav').tabs();
 			});
 		</script>
 	</body>
