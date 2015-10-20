@@ -30,6 +30,7 @@
 		// Initialization logic
 		init: function() {
 			this.buildCache();
+			this.firstState();
 			this.bindEvents();
 		},
 
@@ -60,6 +61,21 @@
 		bindEvents: function() {
 			var plugin = this;
 
+			plugin.$element.on('click' + '.' + plugin._name, 'a[data-toggle="tab"]', function(event) {
+				plugin.openTab.call(plugin, event);
+			});
+		},
+
+		/**
+		 * Remove actions from events
+		 */
+		unbindEvents: function() {
+			this.$element.off('.' + this._name);
+		},
+
+		firstState: function() {
+			var plugin = this;
+
 			/**
 			 * Set the default tab active as the first, or use the anchor from the url
 			 */
@@ -77,16 +93,10 @@
 			 */
 			this.changeTab($($(plugin.$firstTab).attr('href')), 'show', 0);
 
-			plugin.$element.on('click' + '.' + plugin._name, 'a[data-toggle="tab"]', function(event) {
-				plugin.openTab.call(plugin, event);
-			});
-		},
-
-		/**
-		 * Remove actions from events
-		 */
-		unbindEvents: function() {
-			this.$element.off('.' + this._name);
+			/**
+			 * Allow callback on complete loading
+			 */
+			this.callback();
 		},
 
 		/**
