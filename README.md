@@ -57,7 +57,7 @@ $('.tabs').tabs();
 		<tr>
 			<th>mode</th>
 			<td><code>fade</code></td>
-			<td><code>fade</code>, <code>slide</code></td>
+			<td><code>fade</code>, <code>slide</code>, <code>show</code></td>
 			<td>Choisi un type d'animation de changement d'onglets.</td>
 		</tr>
 		<tr>
@@ -74,13 +74,32 @@ $('.tabs').tabs();
 		</tr>
 		<tr>
 			<th>class</th>
-			<td>selected</td>
+			<td>active</td>
 			<td>N'importe quelle chaîne de caractères</td>
 			<td>Permet de choisir le nom de la classe attribuée à l'onglet actuellement sélectionné.</td>
+		</tr>
+		<tr>
+			<th>onComplete</th>
+			<td>null</td>
+			<td>N'importe quelle fonction</td>
+			<td>Permet de déclencher une fonction lorsqu'un onglet a été affiché</td>
 		</tr>
 	</tbody>
 </table>
 
+#Exemples
+```javascript
+$('.tabs').tabs({
+	mode: slide,
+	anchors: true,
+	duration: slow,
+	class: 'tabs-active',
+	onComplete: function() {
+		console.log('action');
+	}
+});
+```
+
 #Évolutions envisagées
 * Rendre l'attribut data-toggle facultatif
-* Proposer d'autres modes d'affichage
+* Proposer un mode d'affichage "CSS"
