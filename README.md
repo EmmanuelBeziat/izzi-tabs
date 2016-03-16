@@ -25,17 +25,17 @@ $('#element').tabs();
 ```html
 <div class="tabs">
 	<ul>
-		<li><a href="#ancho1" data-tab>Tab 1</a></li>
-		<li><a href="#ancho2" data-tab>Tab 2</a></li>
-		<li><a href="#ancho3" data-tab>Tab 3</a></li>
-		<li><a href="#ancho4" data-tab>Tab 4</a></li>
+		<li><a href="#anchor1" data-tab>Tab 1</a></li>
+		<li><a href="#anchor2" data-tab>Tab 2</a></li>
+		<li><a href="#anchor3" data-tab>Tab 3</a></li>
+		<li><a href="#anchor4" data-tab>Tab 4</a></li>
 	</ul>
 </div>
 <div class="content">
-	<div id="ancho1">Content</div>
-	<div id="ancho2">Content</div>
-	<div id="ancho3">Content</div>
-	<div id="ancho4">Content</div>
+	<div id="anchor1">Content</div>
+	<div id="anchor2">Content</div>
+	<div id="anchor3">Content</div>
+	<div id="anchor4">Content</div>
 </div>
 ```
 
