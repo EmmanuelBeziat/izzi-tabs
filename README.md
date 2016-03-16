@@ -1,22 +1,22 @@
 Tabs
 ===========
 
-Un simple plugin d'onglets en jQuery, utilisable aussi bien pour la navigation d'un site qu'un simple bloc de présentation.
+A simple tabs plugin with jQuery. Use it for navigation or as a simple showoff section.
 
-#Installation
+#Install
 
-Si vous utilisez Bower, vous pouvez l'installer directement
+If you use Bower :
 
 ```bash
 $ bower install jquery-simple-tabs
 ```
 
-Sinon, il vous suffit de récupérer manuellement les fichiers sur github.
+Or else, you can just download the files manually on github.
 
-#Utilisation
+#Use
 
-Le principe est basé sur les ancres html.
-Appelez simplement la méthode <code>tabs()</code> sur un objet jQuery, qui soit (ou contienne) une liste html contenant des liens avec l'attribut <code>data-toggle</code> ayant la valeur <code>tab</code>.
+The plugin is based on html anchors.
+Just call the <code>tabs()</code> method on a jQuery object, which must be (or contain) a html list with links and having a <code>data-tabs</code> attribute.
 ```javascript
 $('#element').tabs();
 ```
@@ -25,17 +25,17 @@ $('#element').tabs();
 ```html
 <div class="tabs">
 	<ul>
-		<li><a href="#ancre1" data-toggle="tab">Onglet 1</a></li>
-		<li><a href="#ancre2" data-toggle="tab">Onglet 2</a></li>
-		<li><a href="#ancre3" data-toggle="tab">Onglet 3</a></li>
-		<li><a href="#ancre4" data-toggle="tab">Onglet 4</a></li>
+		<li><a href="#ancho1" data-tab>Tab 1</a></li>
+		<li><a href="#ancho2" data-tab>Tab 2</a></li>
+		<li><a href="#ancho3" data-tab>Tab 3</a></li>
+		<li><a href="#ancho4" data-tab>Tab 4</a></li>
 	</ul>
 </div>
-<div class="contenus">
-	<div id="ancre1">Contenu</div>
-	<div id="ancre2">Contenu</div>
-	<div id="ancre3">Contenu</div>
-	<div id="ancre4">Contenu</div>
+<div class="content">
+	<div id="ancho1">Content</div>
+	<div id="ancho2">Content</div>
+	<div id="ancho3">Content</div>
+	<div id="ancho4">Content</div>
 </div>
 ```
 
@@ -55,39 +55,51 @@ $('.tabs').tabs();
 	</thead>
 	<tbody>
 		<tr>
+			<th>showFirst</th>
+			<td><code>true</code></td>
+			<td><code>false</code>, <code>slide</code>, <code>show</code></td>
+			<td>Automatically show the first tab when loading</td>
+		</tr>
+		<tr>
+			<th>selector</th>
+			<td>'a[data-tab]'</td>
+			<td>Any element to be targeted</td>
+			<td>Help to target the link that must be used as a tab</td>
+		</tr>
+		<tr>
 			<th>mode</th>
 			<td><code>fade</code></td>
 			<td><code>fade</code>, <code>slide</code>, <code>show</code></td>
-			<td>Choisi un type d'animation de changement d'onglets.</td>
+			<td>Choose an animation style</td>
 		</tr>
 		<tr>
 			<th>anchors</th>
 			<td><code>false</code></td>
 			<td><code>true</code>, <code>false</code></td>
-			<td>Gère ou non l'utilisation des ancres dans l'url pour définir l'onglet activé par défaut ; si la valeur est <code>true</code>, entrer l'url d'une page avec l'ancre activera automatiquement l'onglet correspondant.</td>
+			<td>Allow the use of hashes in url to define the active tab. If set on <code>true</code>, typing a url with the anchor will activate the targeted tab.</td>
 		</tr>
 		<tr>
 			<th>duration</th>
 			<td>400</td>
-			<td>nombre ou valeurs clé de temps jquery (<code>slow</code>, <code>fast</code>)</td>
-			<td>Gère le temps de l'animation de changement de contenu.</td>
+			<td>integer or jquery time value (<code>slow</code>, <code>fast</code>)</td>
+			<td>Animation duration</td>
 		</tr>
 		<tr>
 			<th>class</th>
 			<td>active</td>
-			<td>N'importe quelle chaîne de caractères</td>
-			<td>Permet de choisir le nom de la classe attribuée à l'onglet actuellement sélectionné.</td>
+			<td>string</td>
+			<td>Customize the active class on selected tab</td>
 		</tr>
 		<tr>
 			<th>onComplete</th>
 			<td>null</td>
-			<td>N'importe quelle fonction</td>
-			<td>Permet de déclencher une fonction lorsqu'un onglet a été affiché</td>
+			<td>Any function</td>
+			<td>Trigger a function when a tab is selected</td>
 		</tr>
 	</tbody>
 </table>
 
-#Exemples
+#Example
 ```javascript
 $('.tabs').tabs({
 	mode: slide,
@@ -100,6 +112,6 @@ $('.tabs').tabs({
 });
 ```
 
-#Évolutions envisagées
-* Rendre l'attribut data-toggle facultatif
-* Proposer un mode d'affichage "CSS"
+#Todo
+* Make the use of data-toggle optionnal
+* Use a CSS animation mode

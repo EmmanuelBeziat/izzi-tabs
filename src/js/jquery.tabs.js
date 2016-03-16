@@ -50,7 +50,7 @@
 		buildCache: function() {
 			this.$element = $(this.element);
 			this.$body = $('html, body');
-			this.$firstTab = this.$element.find('li:first a[data-toggle="tab"]');
+			this.$firstTab = this.$element.find('li:first ' + this.options.selector);
 			this.$currentTab = this.$firstTab;
 			this.hash = window.location.hash;
 		},
@@ -61,7 +61,7 @@
 		bindEvents: function() {
 			var plugin = this;
 
-			plugin.$element.on('click' + '.' + plugin._name, 'a[data-toggle="tab"]', function(event) {
+			plugin.$element.on('click' + '.' + plugin._name, plugin.options.selector, function(event) {
 				plugin.openTab.call(plugin, event);
 			});
 		},
@@ -79,19 +79,17 @@
 			/**
 			 * Set the default tab active as the first, or use the anchor from the url
 			 */
-			if (plugin.options.anchors && '' !== plugin.hash && plugin.$element.find('a[data-toggle="tab"]')) {
-				plugin.$firstTab = plugin.$element.find('a[data-toggle="tab"][href="' + plugin.hash + '"]');
+			if (plugin.options.anchors && '' !== plugin.hash && plugin.$element.find(plugin.options.selector)) {
+				plugin.$firstTab = plugin.$element.find(plugin.options.selector + '[href="' + plugin.hash + '"]');
 			}
 
 			/**
-			 * Apply class on the first tab
+			 * Apply class on the first tab and show current tab by default if option are activated
 			 */
-			plugin.$firstTab.parent().addClass(plugin.options.class);
-
-			/**
-			 * Show the current tab by default
-			 */
-			this.changeTab($($(plugin.$firstTab).attr('href')), 'show', 0);
+			if (plugin.options.showFirst) {
+				plugin.$firstTab.parent().addClass(plugin.options.class);
+				this.changeTab($($(plugin.$firstTab).attr('href')), 'show', 0);
+			}
 
 			/**
 			 * Allow callback on complete loading
@@ -197,6 +195,8 @@
 	 * Plugin options and their default values
 	 */
 	$.fn[pluginName].defaults = {
+		showFirst: true,
+		selector: 'a[data-tab]',
 		mode: 'fade',
 		anchors: false,
 		duration: 400,

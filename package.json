@@ -1,7 +1,7 @@
 {
   "name": "jquery-tabs",
-  "version": "2.1.0",
-  "description": "Système d'onglets automatisé",
+  "version": "4.1.0",
+  "description": "A simple tabs plugin with jQuery. Use it for navigation or as a simple showoff section.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
