@@ -1,7 +1,11 @@
+![version](https://img.shields.io/badge/version-4.1.0-orange.svg?style=flat-square) ![madewith](https://img.shields.io/badge/made%20with-jquery-brightgreen.svg?style=flat-square)
+
 Tabs
 ===========
 
 A simple tabs plugin with jQuery. Use it for navigation or as a simple showoff section.
+
+---
 
 #Install
 
