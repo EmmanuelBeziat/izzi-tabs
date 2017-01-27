@@ -1,37 +1,33 @@
 {
-  "name": "jquery-tabs",
-  "version": "4.1.0",
-  "description": "A simple tabs plugin with jQuery. Use it for navigation or as a simple showoff section.",
-  "main": "gulpfile.js",
+  "name": "js-izzi-tabs",
+  "version": "1.0.0",
+  "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmmanuelBeziat/jQuery-tabs.git"
+    "url": "git+https://github.com/EmmanuelBeziat/js-izzi-tabs.git"
   },
   "keywords": [
-    "jquery",
-    "scroll"
+    "tabs",
+    "javascript"
   ],
   "author": "EmmanuelBeziat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EmmanuelBeziat/jQuery-tabs/issues"
+    "url": "https://github.com/EmmanuelBeziat/js-izzi-tabs/issues"
   },
-  "homepage": "https://github.com/EmmanuelBeziat/jQuery-tabs",
+  "homepage": "https://github.com/EmmanuelBeziat/js-izzi-tabs#readme",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.2.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-jshint": "^1.10.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-uglify": "^2.0.1"
   }
 }

@@ -1,121 +1,87 @@
-![version](https://img.shields.io/badge/version-4.1.0-orange.svg?style=flat-square) ![madewith](https://img.shields.io/badge/made%20with-jquery-brightgreen.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=flat-square)
 
-Tabs
-===========
+# IzziTabs
 
-A simple tabs plugin with jQuery. Use it for navigation or as a simple showoff section.
+A lightweight and simple plugin to have sticky stuff.
 
 ---
 
 #Install
 
-If you use Bower :
+Using `npm` command, it’s as simple as this :
+```bash
+npm i -D js-izzi-sticky
+```
+
+If you use bower, you can just do
 
 ```bash
-$ bower install jquery-simple-tabs
+$ bower i js-izzi-sticky
 ```
 
-Or else, you can just download the files manually on github.
+Or you could just download the files on GitHub.
 
-#Use
+# How to use
 
-The plugin is based on html anchors.
-Just call the <code>tabs()</code> method on a jQuery object, which must be (or contain) a html list with links and having a <code>data-tabs</code> attribute.
 ```javascript
-$('#element').tabs();
+var izziTabs = new IzziTabs();
 ```
 
-## Exemple
 ```html
-<div class="tabs">
-	<ul>
-		<li><a href="#anchor1" data-tab>Tab 1</a></li>
-		<li><a href="#anchor2" data-tab>Tab 2</a></li>
-		<li><a href="#anchor3" data-tab>Tab 3</a></li>
-		<li><a href="#anchor4" data-tab>Tab 4</a></li>
-	</ul>
-</div>
-<div class="content">
-	<div id="anchor1">Content</div>
-	<div id="anchor2">Content</div>
-	<div id="anchor3">Content</div>
-	<div id="anchor4">Content</div>
-</div>
+<div data-sticky>This item will be sticky</div>
 ```
+
+You can pass either a html object, or a selector in a string.
+
+Check the demo files for an example.
+
+# Options
+
+You can also pass options to the plugin to change it’s default settings, like this:
 
 ```javascript
-$('.tabs').tabs();
+var izziTabs = new IzziTabs({
+});
 ```
 
-#Options
 <table>
 	<thead>
 		<tr>
 			<th>Option</th>
-			<th>Valeur par défaut</th>
-			<th>Valeurs possibles</th>
+			<th>Default value</th>
+			<th>Type</th>
 			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<th>showFirst</th>
-			<td><code>true</code></td>
-			<td><code>false</code>, <code>slide</code>, <code>show</code></td>
-			<td>Automatically show the first tab when loading</td>
+			<th>heightValue</th>
+			<td>0</td>
+			<td>int</td>
+			<td>Define the value of the height when the class "sticky" should be applied</td>
 		</tr>
 		<tr>
-			<th>selector</th>
-			<td>'a[data-tab]'</td>
-			<td>Any element to be targeted</td>
-			<td>Help to target the link that must be used as a tab</td>
-		</tr>
-		<tr>
-			<th>mode</th>
-			<td><code>fade</code></td>
-			<td><code>fade</code>, <code>slide</code>, <code>show</code></td>
-			<td>Choose an animation style</td>
-		</tr>
-		<tr>
-			<th>anchors</th>
-			<td><code>false</code></td>
-			<td><code>true</code>, <code>false</code></td>
-			<td>Allow the use of hashes in url to define the active tab. If set on <code>true</code>, typing a url with the anchor will activate the targeted tab.</td>
-		</tr>
-		<tr>
-			<th>duration</th>
-			<td>400</td>
-			<td>integer or jquery time value (<code>slow</code>, <code>fast</code>)</td>
-			<td>Animation duration</td>
-		</tr>
-		<tr>
-			<th>class</th>
-			<td>active</td>
+			<th>classIsSticky</th>
+			<td>is-sticky</td>
 			<td>string</td>
-			<td>Customize the active class on selected tab</td>
+			<td>The class name to be applied when the element is set to "sticky"</td>
 		</tr>
 		<tr>
-			<th>onComplete</th>
+			<th>onStick</th>
 			<td>null</td>
-			<td>Any function</td>
-			<td>Trigger a function when a tab is selected</td>
+			<td>function</td>
+			<td>A callback function to be called when the sticky magic is applyed</td>
+		</tr>
+		<tr>
+			<th>onUnstick</th>
+			<td>null</td>
+			<td>function</td>
+			<td>A callback function to be called when the sticky magic is removed</td>
 		</tr>
 	</tbody>
 </table>
 
-#Example
-```javascript
-$('.tabs').tabs({
-	mode: slide,
-	anchors: true,
-	duration: slow,
-	class: 'tabs-active',
-	onComplete: function() {
-		console.log('action');
-	}
-});
-```
+# TODO
 
-#Todo
-* Make the use of data-toggle optionnal
-* Use a CSS animation mode
+* Add constraint element (an element to move within)
+* Add the possibility to define options in html data attribute

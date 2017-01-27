@@ -2,12 +2,20 @@
  * Gulp dependancies
  */
 var gulp = require('gulp'),
-	plugins = require('gulp-load-plugins')();
+	plugins = {
+		stylus: require('gulp-stylus'),
+		uglify: require('gulp-uglify'),
+		concat: require('gulp-concat'),
+		rename: require('gulp-rename'),
+		plumber: require('gulp-plumber'),
+		livereload: require('gulp-livereload'),
+		sourcemaps: require('gulp-sourcemaps')
+	}
 
 /**
  * Project & pathes
  */
-var project = 'jquery-tabs',
+var project = 'izzi-tabs',
 	path = {
 		demo: './demo',
 		css: './demo/css',
@@ -28,7 +36,7 @@ gulp.task('reload', function() {
  * Save and minify stylus files in one css file
  * Create sourcemap file
  **/
-gulp.task('stylus', function() {
+gulp.task('styles', function() {
 	return gulp.src(path.stylus + '/main.styl')
 		.pipe(plugins.plumber())
 		.pipe(plugins.sourcemaps.init())
@@ -45,7 +53,7 @@ gulp.task('stylus', function() {
  * Save and minify js files in one js file
  * Create sourcemap file
  **/
-gulp.task('javascript', function() {
+gulp.task('scripts', function() {
 	return gulp.src(path.js + '/*.js')
 		.pipe(plugins.plumber())
 		.pipe(plugins.sourcemaps.init())
@@ -59,12 +67,12 @@ gulp.task('javascript', function() {
 		.pipe(plugins.livereload());
 });
 
-gulp.task('default', ['stylus', 'javascript'], function() {
+gulp.task('build', ['styles', 'scripts'], function() {
 });
 
 gulp.task('watch', function() {
 	plugins.livereload.listen();
-	gulp.watch(path.stylus + '/*.styl', ['stylus']);
-	gulp.watch(path.js + '/*.js', ['javascript']);
+	gulp.watch(path.stylus + '/*.styl', ['styles']);
+	gulp.watch(path.js + '/*.js', ['scripts']);
 	gulp.watch('**/*.html', ['reload']);
 });
