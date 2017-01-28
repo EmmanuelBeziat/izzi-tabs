@@ -3,13 +3,70 @@
  **/
 $font-stack-common = "Source Sans Pro", "Helvetica Neue", "Segoe UI", Roboto, Arial, sans-serif
 
+$color-background = #495979
+$color-tab-inactive = #9dadcd
+$color-tab-active = #fff
+$color-highlight = #d92828
 /**
  * Base
  **/
 body
 	margin 0
 	font 400 16px/1.5 $font-stack-common
+	background $color-background
 
 a
 	transition .2s ease-in-out
+	text-decoration none
 
+.demo
+	max-width 680px
+	margin 2rem auto
+
+.tab-links
+	display flex
+
+.tab-links__item
+	padding 1em 2em
+	flex 1
+	color $color-tab-active
+	transition .2s ease-in-out
+	position relative
+	overflow hidden
+
+	&::after
+		content ""
+		position absolute
+		z-index -1
+		top 0
+		bottom 0
+		left 0
+		right 0
+		background $color-tab-inactive
+		transition .2s ease-in-out
+		transform translate3d(0, 100%, 0) translate3d(0, -3px, 0)
+
+.tab-links__item + .tab-links__item {
+	margin-left 1em
+}
+
+.tab-links__item.is-active
+	color $color-background
+
+	&::after
+		transform translate3d(0,0,0)
+		background $color-tab-active
+
+.tab-content
+	margin-top 2rem
+	color $color-tab-active
+
+	h1
+		margin-top 0
+		font-weight 200
+
+.tab-content__item
+	display none
+
+.tab-content__item.is-active
+	display block

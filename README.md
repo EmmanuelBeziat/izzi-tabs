@@ -10,13 +10,13 @@ A lightweight and simple plugin to have sticky stuff.
 
 Using `npm` command, it’s as simple as this :
 ```bash
-npm i -D js-izzi-sticky
+npm i -D js-izzi-tabs
 ```
 
 If you use bower, you can just do
 
 ```bash
-$ bower i js-izzi-sticky
+$ bower i js-izzi-tabs
 ```
 
 Or you could just download the files on GitHub.
@@ -24,14 +24,41 @@ Or you could just download the files on GitHub.
 # How to use
 
 ```javascript
-var izziTabs = new IzziTabs();
-```
-
-```html
-<div data-sticky>This item will be sticky</div>
+var izziTabs = new IzziTabs('.js-izzi-tabs');
 ```
 
 You can pass either a html object, or a selector in a string.
+
+Then, you should have a markup similar to this:
+
+```html
+<nav class="tab-links js-izzi-tabs">
+	<a href="#tab1" class="tab-links__item is-active">tab1</a>
+	<a href="#tab2" class="tab-links__item">tab2</a>
+	<a href="#tab3" class="tab-links__item">tab3</a>
+	<a href="#tab4" class="tab-links__item">tab4</a>
+</nav>
+
+<div class="tab-content">
+	<div class="tab-content__item is-active" id="tab1">
+		<!-- -->
+	</div>
+
+	<div class="tab-content__item" id="tab2">
+		<!-- -->
+	</div>
+
+	<div class="tab-content__item" id="tab3">
+		<!-- -->
+	</div>
+
+	<div class="tab-content__item" id="tab4">
+		<!-- -->
+	</div>
+</div>
+```
+
+The plugin work with a simple anchor system.
 
 Check the demo files for an example.
 
@@ -40,7 +67,12 @@ Check the demo files for an example.
 You can also pass options to the plugin to change it’s default settings, like this:
 
 ```javascript
-var izziTabs = new IzziTabs({
+var izziTabs = new IzziTabs('.js-izzi-tabs', {
+	tabLinkSelector: 'tab-link',
+	tabLinkActiveClass: 'tab-link--active',
+	afterShowTab: function () {
+		console.log('after show');
+	}
 });
 ```
 
@@ -55,33 +87,44 @@ var izziTabs = new IzziTabs({
 	</thead>
 	<tbody>
 		<tr>
-			<th>heightValue</th>
-			<td>0</td>
-			<td>int</td>
-			<td>Define the value of the height when the class "sticky" should be applied</td>
-		</tr>
-		<tr>
-			<th>classIsSticky</th>
-			<td>is-sticky</td>
+			<th>tabLinkSelector</th>
+			<td>'.tab-links__item'</td>
 			<td>string</td>
-			<td>The class name to be applied when the element is set to "sticky"</td>
+			<td>Define a CSS selector to find your link items</td>
 		</tr>
 		<tr>
-			<th>onStick</th>
-			<td>null</td>
-			<td>function</td>
-			<td>A callback function to be called when the sticky magic is applyed</td>
+			<th>tabLinkActiveClass</th>
+			<td>'is-sticky'</td>
+			<td>string</td>
+			<td>The class name to be applied to the link item you activate</td>
 		</tr>
 		<tr>
-			<th>onUnstick</th>
+			<th>tabItemSelector</th>
+			<td>'.tab-content__item'</td>
+			<td>string</td>
+			<td>Define a CSS selector to find your open tab panel</td>
+		</tr>
+		<tr>
+			<th>tabItemActiveClass</th>
+			<td>'is-active'</td>
+			<td>string</td>
+			<td>The class name to be applied to the panel you activate</td>
+		</tr>
+		<tr>
+			<th>beforeShowTab</th>
 			<td>null</td>
 			<td>function</td>
-			<td>A callback function to be called when the sticky magic is removed</td>
+			<td>A callback function to be called before the panel is showed</td>
+		</tr>
+		<tr>
+			<th>afterShowTab</th>
+			<td>null</td>
+			<td>function</td>
+			<td>A callback function to be called after the panel is showed</td>
 		</tr>
 	</tbody>
 </table>
 
 # TODO
 
-* Add constraint element (an element to move within)
-* Add the possibility to define options in html data attribute
+* Add possibility to easily animate the tab panel
