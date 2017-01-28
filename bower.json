@@ -1,0 +1,21 @@
+{
+  "name": "js-izzi-tabs",
+  "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
+  "main": "index.js",
+  "authors": [
+    "EmmanuelBeziat"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tabs",
+    "javascript"
+  ],
+  "homepage": "https://github.com/EmmanuelBeziat/js-izzi-tabs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
