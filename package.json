@@ -1,5 +1,5 @@
 {
-  "name": "js-izzi-tabs",
+  "name": "izzi-tabs",
   "version": "1.0.0",
   "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EmmanuelBeziat/js-izzi-tabs.git"
+    "url": "git+https://github.com/EmmanuelBeziat/izzi-tabs.git"
   },
   "keywords": [
     "tabs",
@@ -17,9 +17,9 @@
   "author": "EmmanuelBeziat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EmmanuelBeziat/js-izzi-tabs/issues"
+    "url": "https://github.com/EmmanuelBeziat/izzi-tabs/issues"
   },
-  "homepage": "https://github.com/EmmanuelBeziat/js-izzi-tabs#readme",
+  "homepage": "https://github.com/EmmanuelBeziat/izzi-tabs#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",

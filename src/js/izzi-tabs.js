@@ -2,7 +2,7 @@
  * A simple tabs plugin. Use it for navigation or as a simple showoff section.
  * Version : 1.0.0
  * Emmanuel B. (www.emmanuelbeziat.com)
- * https://github.com/EmmanuelBeziat/js-izzi-tabs
+ * https://github.com/EmmanuelBeziat/izzi-tabs
  **/
 
 (function (root, factory) {
@@ -49,7 +49,7 @@
 		 * By default, search for an item with 'data-sticky' attribute
 		 */
 		if (!el) {
-			self.tabs = document.querySelector('.js-izzi-tabs');
+			self.tabs = document.querySelector('.izzi-tabs');
 		}
 
 		if (el && 'string' === typeof el) {

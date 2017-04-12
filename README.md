@@ -10,13 +10,13 @@ A lightweight and simple plugin to have sticky stuff.
 
 Using `npm` command, it’s as simple as this :
 ```bash
-npm i -D js-izzi-tabs
+npm i -D izzi-tabs
 ```
 
 If you use bower, you can just do
 
 ```bash
-$ bower i js-izzi-tabs
+$ bower i izzi-tabs
 ```
 
 Or you could just download the files on GitHub.
@@ -24,7 +24,7 @@ Or you could just download the files on GitHub.
 # How to use
 
 ```javascript
-var izziTabs = new IzziTabs('.js-izzi-tabs');
+var izziTabs = new IzziTabs('.izzi-tabs');
 ```
 
 You can pass either a html object, or a selector in a string.
@@ -32,7 +32,7 @@ You can pass either a html object, or a selector in a string.
 Then, you should have a markup similar to this:
 
 ```html
-<nav class="tab-links js-izzi-tabs">
+<nav class="tab-links izzi-tabs">
 	<a href="#tab1" class="tab-links__item is-active">tab1</a>
 	<a href="#tab2" class="tab-links__item">tab2</a>
 	<a href="#tab3" class="tab-links__item">tab3</a>
@@ -67,7 +67,7 @@ Check the demo files for an example.
 You can also pass options to the plugin to change it’s default settings, like this:
 
 ```javascript
-var izziTabs = new IzziTabs('.js-izzi-tabs', {
+var izziTabs = new IzziTabs('.izzi-tabs', {
 	tabLinkSelector: 'tab-link',
 	tabLinkActiveClass: 'tab-link--active',
 	afterShowTab: function () {

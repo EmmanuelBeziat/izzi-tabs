@@ -1,5 +1,5 @@
 {
-  "name": "js-izzi-tabs",
+  "name": "izzi-tabs",
   "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
   "main": "index.js",
   "authors": [
@@ -10,7 +10,7 @@
     "tabs",
     "javascript"
   ],
-  "homepage": "https://github.com/EmmanuelBeziat/js-izzi-tabs",
+  "homepage": "https://github.com/EmmanuelBeziat/izzi-tabs",
   "ignore": [
     "**/.*",
     "node_modules",
