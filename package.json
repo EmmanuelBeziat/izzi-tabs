@@ -1,6 +1,6 @@
 {
   "name": "izzi-tabs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
   "main": "bin/izzi-tabs.min.js",
   "scripts": {
