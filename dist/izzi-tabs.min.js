@@ -1,6 +1,6 @@
 /*!
  * A simple tabs plugin. Use it for navigation or as a simple showoff section.
- * Version : 1.0.0
+ * Version : 1.0.1
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/izzi-tabs
  **/
