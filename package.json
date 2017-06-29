@@ -2,7 +2,7 @@
   "name": "izzi-tabs",
   "version": "1.0.0",
   "description": "A simple tabs plugin. Use it for navigation or as a simple showoff section.",
-  "main": "index.js",
+  "main": "bin/izzi-tabs.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
